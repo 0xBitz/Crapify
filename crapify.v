@@ -27,7 +27,7 @@ pub fn main(){
 	print("  ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░░▒ ░      ▒ ░ ░       ▓██ ░▒░ \n")
 	print("░          ░░   ░   ░   ▒   ░░        ▒ ░ ░ ░     ▒ ▒ ░░  \n")
 	print("░ ░         ░           ░  ░          ░           ░ ░     \n")
-	print("[ Crapify Spotify Account Gen ] [ Github -> github.com/CrypticDev ]\n")
+	print("[ Crapify Spotify Account Gen ] [ Github -> github.com/hackeroni1337 ]\n")
 	if os.exists(valid_file){
 		print("[ Crapify Saving Valid Account to ] -> $valid_file \n")
 		crapify_gen()

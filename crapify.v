@@ -52,7 +52,7 @@ pub fn crapify_gen(){
 		username := rand.string_from_set('QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcbnm123456789', 7)
 
 		data := {
-			'birth_day': '01',
+	    'birth_day': '01',
             'birth_month': '01',
             'birth_year': '1969',
             'creation_flow': '',

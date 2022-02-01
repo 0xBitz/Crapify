@@ -5,7 +5,7 @@ import time
 import rand
 
 const(
-	valid_file = "file_here"
+	valid_file = "bruh.txt"
 )
 
 pub fn clear(){
@@ -27,7 +27,7 @@ pub fn main(){
 	print("  ░  ▒     ░▒ ░ ▒░  ▒   ▒▒ ░░▒ ░      ▒ ░ ░       ▓██ ░▒░ \n")
 	print("░          ░░   ░   ░   ▒   ░░        ▒ ░ ░ ░     ▒ ▒ ░░  \n")
 	print("░ ░         ░           ░  ░          ░           ░ ░     \n")
-	print("[ Crapify Spotify Account Gen ] [ Github -> github.com/hackeroni1337 ]\n")
+	print("[ Crapify Spotify Account Gen ] [ Github -> github.com/CrypticDev ]\n")
 	if os.exists(valid_file){
 		print("[ Crapify Saving Valid Account to ] -> $valid_file \n")
 		crapify_gen()
@@ -52,7 +52,7 @@ pub fn crapify_gen(){
 		username := rand.string_from_set('QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcbnm123456789', 7)
 
 		data := {
-	    'birth_day': '01',
+			'birth_day': '01',
             'birth_month': '01',
             'birth_year': '1969',
             'creation_flow': '',
@@ -84,12 +84,10 @@ pub fn crapify_gen(){
 			print(" [ Crapify Can't Make The Account -> ${email}@crapify.gen:${pass} ] \n")
 			continue
 		}
-		print("[ Crapify Made The Account -> ${email}@crapify.gen:${pass} ] \n")
-		os.write_file('${valid_file}', 'Crapify Made An Account -> ${email}@crapify.gen:${pass} ') or {
-			print("[ Crapify Can't Save Email & Pass To List ] -> ${valid_file} \n")
-			continue
-		}
-		
+		print("[ Crapify Made The Account -> ${email}@gmail.com:${pass} ] \n")
+		mut save_account := os.open_append('${valid_file}') or { continue }
+		save_account.writeln('[ Crapify Gen Made The Account -> ${email}@crapify.gen:${pass} ]') or { continue }
 	}
 }
+
 
